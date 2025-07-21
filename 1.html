@@ -17,9 +17,33 @@
         <a href="./2.html">联系我</a>
         <a href="./3.html">作品</a>
     </div>
-    <h5>由于huang1111网盘打不开，你可以在这里下载视频中所有的文件</h5>
-    <h5>VMware虚拟机安装包123云盘下载地址：<a href="https://www.123684.com/s/qZAFTd-aZgfv">链接直达<a/></h5>
-    <h5>windows8.1镜像ed2k下载链接：ed2k://|file|cn_windows_8_1_x64_dvd_2707237.iso|4076017664|839CBE17F3CE8411E8206B92658A91FA|/  win8.1镜像，该地址需要借助迅雷下载，复制地址，即可在迅雷下载。此链接来源于msdn.itellyou.cn，侵删。</h5>
-    <h5>MSN整合包123云盘下载地址：<a href="https://www.123684.com/s/qZAFTd-fZgfv">链接直达</a></h5>
+    <!-- 搜索框 -->
+    <input type="text" id="search-input" placeholder="搜索下载文件">
+    <h5>你可以在这里下载视频中所有的文件</h5>
+    <div class="download-item">
+        <h5>VMware虚拟机安装包123云盘下载地址：<a href="https://www.123684.com/s/qZAFTd-aZgfv">链接直达</a></h5>
+    </div>
+    <div class="download-item">
+        <h5>windows8.1镜像ed2k下载链接：ed2k://|file|cn_windows_8_1_x64_dvd_2707237.iso|4076017664|839CBE17F3CE8411E8206B92658A91FA|/  win8.1镜像，该地址需要借助迅雷下载，复制地址，即可在迅雷下载。此链接来源于msdn.itellyou.cn，侵删。</h5>
+    </div>
+    <div class="download-item">
+        <h5>MSN整合包123云盘下载地址：<a href="https://www.123684.com/s/qZAFTd-fZgfv">链接直达</a></h5>
+    </div>
+    <script>
+        const searchInput = document.getElementById('search-input');
+        const downloadItems = document.querySelectorAll('.download-item');
+
+        searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            downloadItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
