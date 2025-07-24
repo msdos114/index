@@ -1,5 +1,5 @@
 body {
-    background-color: #16c576;
+    background-color: #ffffff;
 }
 
 /* 拟物化风格的标题栏 */
@@ -24,13 +24,14 @@ body {
     border-right: 1px solid #888;
     border-bottom: 1px solid #888;
     box-shadow: inset 1px 1px 0 #fff, inset -1px -1px 0 #888;
-    background-color: #16c576;
+    background-color: #ffffff;
     transition: background-color 0.3s;
 }
 
 .navbar a:hover {
     background-color: #d0d0d0;
 }
+
 
 
 
